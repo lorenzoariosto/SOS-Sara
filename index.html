@@ -12,6 +12,36 @@
 <p>Scemo chi leggeeee</p>
 
 <p>Ci sei cascata aahahhahahahah</p>
+    
+<p>Per iniziare testerei la tua abilità mentale per vedere se sei in grado di poter acceder al mio sito.</p>
+<p>Il gioco è semplice: trova tutte le differenze tra le due immagini.</p>
+<p>Una volta identificate tutte inserisci nel riquadro sotto la risposta esatta.</p>
 
+<p>Ecco le 2 immagini:</p>
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="immagine1.jpg" alt="Immagine 1" style="width: 45%;">
+  <img src="immagine2.jpg" alt="Immagine 2" style="width: 45%;">
+
+<label for="numero">Inserisci la soluzione:</label>
+  <input type="number" id="numero" placeholder="Inserisci un numero">
+  <button onclick="controlla()">Verifica</button>
+
+  <p id="risultato"></p>
+
+  <script>
+    function controlla() {
+      let valore = document.getElementById("numero").value;
+      let output = document.getElementById("risultato");
+
+      if (valore == 0) {
+        output.innerHTML = "🎉 Corretto! Hai vinto!";
+        output.style.color = "green";
+      } else {
+        output.innerHTML = "❌ Ritenta, sarai più fortunato";
+        output.style.color = "red";
+      }
+    }
+  </script>
+</div>    
 </body>
 </html>
